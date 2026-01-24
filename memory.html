@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Memories</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== BODY ===== */
+body{
+  margin:0;
+  background:#ffeaf3;
+  font-family:cursive;
+}
+
+/* ===== TITLE ===== */
+h2{
+  text-align:center;
+  color:#a12b63;
+  padding:16px;
+}
+
+/* ===== MASONRY GALLERY ===== */
+.gallery{
+  column-count:3;
+  column-gap:14px;
+  padding:14px;
+}
+
+/* ===== BUTTON ===== */
+.story-btn{
+  background:#ff9ecf;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:25px;
+  font-size:14px;
+  cursor:pointer;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.story-btn:hover{
+  background:#ff7bbf;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:#ffffff;
+  border-radius:18px;
+  padding:8px;
+  margin-bottom:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  break-inside: avoid;
+}
+
+/* ===== IMAGE (NO FIXED HEIGHT) ===== */
+.card img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+/* ===== CAPTION ===== */
+.card p{
+  margin:6px 0 0;
+  font-size:12px;
+  color:#7a1f4a;
+  text-align:center;
+}
+
+/* ===== FULLSCREEN POPUP ===== */
+.popup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.popup img{
+  max-width:92%;
+  max-height:88%;
+  border-radius:16px;
+}
+
+.popup span{
+  position:absolute;
+  top:20px;
+  right:25px;
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:480px){
+  .gallery{
+    column-count:3;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h2>Our Memories 💕</h2>
+
+<div class="gallery">
+
+  <div class="card">
+    <img src="1.jpeg" onclick="openImg(this.src)">
+    <p>The boy who i fell in love with 🙈</p>
+  </div>
+
+  <div class="card">
+    <img src="2.jpeg" onclick="openImg(this.src)">
+    <p>Our evening talks 🥺</p>
+  </div>
+
+  <div class="card">
+    <img src="3.jpeg" onclick="openImg(this.src)">
+    <p>First photo of us 🫀</p>
+  </div>
+
+  <div class="card">
+    <img src="4.jpeg" onclick="openImg(this.src)">
+    <p>Our first outing 🌻</p>
+  </div>
+
+  <div class="card">
+    <img src="5.jpeg" onclick="openImg(this.src)">
+    <p>My first birthday with you 🫶</p>
+  </div>
+
+  <div class="card">
+    <img src="6.jpeg" onclick="openImg(this.src)">
+    <p>After so many struggles 🐻</p>
+  </div>
+ <div class="card">
+    <img src="7.jpeg" onclick="openImg(this.src)">
+    <p>Meet after years 🌖</p>
+  </div>
+ <div class="card">
+    <img src="8.jpeg" onclick="openImg(this.src)">
+    <p>College days 🌈</p>
+  </div>
+ <div class="card">
+    <img src="9.jpeg" onclick="openImg(this.src)">
+    <p>Our first temple vist 🪷</p>
+  </div>
+ <div class="card">
+    <img src="10.jpeg" onclick="openImg(this.src)">
+    <p>Our first date🪐</p>
+  </div>
+ <div class="card">
+    <img src="11.jpeg" onclick="openImg(this.src)">
+    <p>Temple runs😇</p>
+  </div>
+ <div class="card">
+    <img src="12.jpeg" onclick="openImg(this.src)">
+    <p>👻</p>
+  </div>
+ <div class="card">
+    <img src="13.jpeg" onclick="openImg(this.src)">
+    <p>Our first anniversary celebration💓</p>
+  </div>
+ <div class="card">
+    <img src="14.jpeg" onclick="openImg(this.src)">
+    <p>OMG meet near my🏠</p>
+  </div>
+ <div class="card">
+    <img src="15.jpeg" onclick="openImg(this.src)">
+    <p>Atria diaries👀</p>
+  </div>
+ <div class="card">
+    <img src="16.jpeg" onclick="openImg(this.src)">
+    <p>Our first short trip⚡️</p>
+  </div>
+ <div class="card">
+    <img src="17.jpeg" onclick="openImg(this.src)">
+    <p>🔥</p>
+  </div>
+ <div class="card">
+    <img src="18.jpeg" onclick="openImg(this.src)">
+    <p>Our first long drive🦢</p>
+  </div>
+
+
+</div>
+
+
+<!-- OUR STORY BUTTON -->
+<div style="text-align:center; margin-bottom:12px;">
+  <button class="story-btn" onclick="goStory()">Our Journey🧭</button>
+</div>
+
+
+<!-- ===== POPUP ===== -->
+<div class="popup" id="popup">
+  <span onclick="closeImg()">×</span>
+  <img id="popupImg">
+</div>
+
+<script>
+function openImg(src){
+  document.getElementById("popupImg").src = src;
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closeImg(){
+  document.getElementById("popup").style.display = "none";
+}
+function goStory(){
+  window.location.href="story.html";
+}
+</script>
+
+</body>
+</html>

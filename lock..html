@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Unlock Love</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  background: linear-gradient(135deg, #ffd6e8, #ffeaf3);
+  color:#8b2f5f;
+  font-family:cursive;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+.box{
+  background:#fff;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+input{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #f3b6cf;
+  text-align:center;
+}
+button{
+  margin-top:12px;
+  padding:8px 22px;
+  border:none;
+  border-radius:20px;
+  background:#f3b6cf;
+  color:#5a1033;
+}
+p{font-size:14px;}
+</style>
+</head>
+
+<body>
+<div class="box">
+  <h2>Its locked🔒</h2><h5>Only you can unlock🗝️</h5>
+  <p>(Hint:Nimge nan engh kariyodu eshta?)<br>First letter is capital</p>
+  <input type="password" id="pass" placeholder="Enter password">
+  <br>
+  <button onclick="unlock()">Unlock🔓</button>
+</div>
+
+<script>
+function unlock(){
+  if(document.getElementById("pass").value==="Chubba"){
+    window.location.href="wish.html";
+  }else{
+    alert("Wrong password 💔");
+  }
+}
+</script>
+</body>
+</html>
